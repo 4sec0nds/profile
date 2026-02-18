@@ -1,0 +1,42 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Thiết kế website giá rẻ uy tín chuyên nghiệp",
+            "category": "Web Design",
+            "date": "21",
+            "month": "Thg 10",
+            "image": "https://via.placeholder.com/600x400",
+            "desc": "Xu hướng truy cập website tìm kiếm thông tin ngày càng tăng...",
+            "content": "<p>Nội dung chi tiết bài viết số 1...</p>",
+            "link": "#"
+        },
+        {
+            "id": 2,
+            "title": "Blogger Hoàng Đam, chàng trai 9x đam mê công nghệ",
+            "category": "About Me",
+            "date": "15",
+            "month": "Thg 09",
+            "image": "https://via.placeholder.com/600x400",
+            "desc": "Câu chuyện về hành trình trở thành Blogger...",
+            "content": "<p>Nội dung chi tiết bài viết số 2...</p>",
+            "link": "#"
+        }
+    ],
+    "works": [
+        {
+            "id": 1,
+            "title": "Website Thương Mại Điện Tử",
+            "category": "web",
+            "image": "https://via.placeholder.com/600x400",
+            "link": "#"
+        },
+        {
+            "id": 2,
+            "title": "App Quản Lý Chi Tiêu",
+            "category": "app",
+            "image": "https://via.placeholder.com/600x400",
+            "link": "#"
+        }
+    ]
+}

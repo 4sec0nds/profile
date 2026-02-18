@@ -1,0 +1,102 @@
+/* --- FILE: contact.css --- */
+
+/* Bố cục chia 2 cột: Form và Map */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.sub-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    /* Biến này vẫn sẽ hiểu nếu được khai báo ở style.css */
+}
+
+/* Style cho các ô nhập liệu (Input) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-input {
+    width: 100%;
+    background: #252525;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input:focus {
+    border-color: var(--accent);
+    background: #2a2a2a;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+}
+
+textarea.form-input {
+    resize: none;
+}
+
+/* Nút Gửi */
+.btn-send {
+    background: var(--accent);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-send:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Phần bản đồ */
+.map-box {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.map-box iframe {
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+
+/* Responsive Mobile riêng cho Contact */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-box {
+        height: 300px;
+    }
+}

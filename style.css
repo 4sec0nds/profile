@@ -1,0 +1,453 @@
+/* --- RESET & VARIABLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --bg-dark: #111111;
+    --card-bg: #1e1e1e;
+    --text-main: #ffffff;
+    --text-mute: #a6a6a6;
+    --accent: #2563eb;
+    /* Màu xanh dương chủ đạo */
+    --radius: 20px;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* --- 1. HEADER COVER (ẢNH NỀN BIỂN) --- */
+.header-cover {
+    width: 100%;
+    height: 200px;
+    /* Chiều cao ảnh nền */
+    /* Link ảnh biển giống mẫu - Bạn có thể thay link khác */
+    background-image: url('image/banner5.gif');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay mờ nhẹ trên ảnh cho đẹp (tùy chọn) */
+.header-cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(17, 17, 17, 0.8));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+    /* Nổi lên trên lớp phủ */
+}
+
+/* --- 2. PROFILE CARD (ĐÈ LÊN HEADER) --- */
+.profile-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin-top: -100px;
+    /* QUAN TRỌNG: Kéo ngược lên để đè vào ảnh */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(120, 2, 94, 0.515);
+    flex-wrap: wrap;
+    /* Để xuống dòng khi mobile */
+    gap: 30px;
+}
+
+/* Bên trái Profile */
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+    /* Bo vuông tròn giống mẫu */
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #333;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.job-badge {
+    background: #2b2b2b;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: var(--text-mute);
+    font-size: 18px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+/* Bên phải Profile (Thông tin liên hệ) */
+.profile-right {
+    display: flex;
+    gap: 40px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row .label {
+    font-size: 11px;
+    color: #777;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.info-row .value {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- 3. KHU VỰC DƯỚI (SIDEBAR + CONTENT) --- */
+.content-area {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    width: 90px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 30px 0;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(120, 2, 94, 0.515);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-item {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: #2a2a2a;
+    color: #aaa;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Nội dung chính */
+.main-content {
+    flex: 1;
+    /* Chiếm hết chỗ còn lại */
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    min-height: 400px;
+    box-shadow: 0 5px 15px rgba(120, 2, 94, 0.515);
+}
+
+/* Style cho các Tab nội dung */
+.tab-pane {
+    display: none;
+    animation: slideUp 0.5s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-header h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.section-header .line {
+    width: 50px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
+
+.bio {
+    color: var(--text-mute);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.sub-heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Grid Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-box {
+    background: #252525;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.service-box .icon {
+    font-size: 26px;
+    color: var(--accent);
+    margin-top: 2px;
+}
+
+.service-box h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.service-box p {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.4;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+    .header-cover {
+        height: 200px;
+    }
+
+    .profile-card {
+        margin-top: -50px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .profile-left {
+        flex-direction: column;
+    }
+
+    .profile-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .content-area {
+        flex-direction: column;
+    }
+
+    /* Menu Mobile nằm ngang dưới cùng hoặc trên cùng */
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        z-index: 100;
+        border-radius: 0;
+        padding: 10px;
+        background: #1a1a1a;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-item {
+        width: auto;
+        height: 50px;
+        padding: 0 15px;
+        background: transparent;
+    }
+
+    .main-content {
+        margin-bottom: 80px;
+        padding: 20px;
+    }
+
+    /* Tránh bị menu che */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* secret */
+/* --- SECRET LOGIN MODAL --- */
+.modal-overlay {
+    display: none;
+    /* Mặc định ẩn */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Nền đen mờ */
+    z-index: 9999;
+    /* Luôn nổi lên trên cùng */
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: #222;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    border: 1px solid #444;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.login-box h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #111;
+    color: white;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background: #1d4ed8;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #888;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: white;
+}

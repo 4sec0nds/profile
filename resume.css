@@ -1,0 +1,146 @@
+/* --- RESUME SECTION STYLE --- */
+
+/* 1. Bố cục chia 2 cột (Education & Experience) */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Chia đôi màn hình */
+    gap: 50px;
+    /* Khoảng cách giữa 2 cột */
+    margin-bottom: 50px;
+}
+
+/* Tiêu đề cột (Icon + Chữ) */
+.resume-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+.resume-header i {
+    color: var(--accent);
+    /* Icon màu xanh */
+    background: #252525;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 2. Timeline (Dòng thời gian dọc) */
+.timeline-list {
+    position: relative;
+    border-left: 1px solid #333;
+    /* Đường kẻ dọc mờ */
+    padding-left: 30px;
+    /* Cách lề trái để chừa chỗ cho chấm tròn */
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Dấu chấm tròn màu xanh */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    /* Căn chỉnh vị trí chấm */
+    left: -36px;
+    /* Kéo chấm sang trái đè lên đường kẻ */
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #1e1e1e;
+    /* Viền đen giả để tách khỏi đường kẻ */
+}
+
+/* Nội dung từng mốc */
+.timeline-title {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.timeline-year {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.timeline-desc {
+    font-size: 14px;
+    color: #a6a6a6;
+    line-height: 1.6;
+}
+
+/* 3. Phần Skills (Thanh kỹ năng) */
+.skills-section {
+    margin-top: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Xếp dọc các skill */
+    gap: 25px;
+    background: #252525;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Thanh background (màu xám tối) */
+.skill-bar-bg {
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Thanh fill (màu xanh chạy theo %) */
+.skill-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 10px;
+    position: relative;
+    /* Hiệu ứng bóng đổ cho thanh */
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+        /* Chuyển thành 1 cột */
+        gap: 30px;
+    }
+}
