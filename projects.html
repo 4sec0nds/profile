@@ -1,136 +1,346 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự án của tôi</title>
-    <style>
-        /* --- COPY CSS CƠ BẢN TỪ TRANG INDEX SANG --- */
-        :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--dark); transition: 0.5s; }
-        .menu-btn { font-size: 30px; cursor: pointer; position: fixed; top: 15px; left: 20px; z-index: 2; border: none; background: none; }
-        .sidebar { height: 100%; width: 0; position: fixed; z-index: 10; top: 0; left: 0; background-color: #111; overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
-        .sidebar a { padding: 10px 10px 10px 32px; text-decoration: none; font-size: 18px; color: #818181; display: block; transition: 0.3s; white-space: nowrap; }
-        .sidebar a:hover { color: #f1f1f1; background-color: #333; }
-        .sidebar .close-btn { position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; }
+    <title>Phúc Thắng - Portfolio</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="works.css">
 
-        /* --- CSS RIÊNG CHO TRANG PROJECT --- */
-        .header-section { text-align: center; padding-top: 80px; padding-bottom: 20px; }
-        
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tự động chia cột */
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            border: 1px solid #eee;
-        }
-
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-
-        .card-img {
-            width: 100%;
-            height: 180px;
-            background-color: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-weight: bold;
-        }
-
-        .card-body { padding: 20px; }
-        .card-title { margin: 0 0 10px; color: var(--primary); }
-        .card-tech { font-size: 0.9rem; color: #64748b; margin-bottom: 15px; font-style: italic; }
-        .card-desc { font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; }
-        
-        .btn-view {
-            display: block;
-            width: 100%;
-            padding: 10px 0;
-            text-align: center;
-            background: var(--dark);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn-view:hover { background: var(--primary); }
-
-    </style>
 </head>
+
 <body>
 
-    <span class="menu-btn" onclick="openNav()">&#9776;</span>
+    <div class="header-cover"></div>
 
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
-        <h3 style="color:white; text-align:center;">Menu</h3>
-        <a href="index.html">🏠 Giới thiệu</a>
-        <a href="projects.html" style="color: white;">🚀 Các Dự Án</a>
-        <a href="#">📞 Liên hệ</a>
-    </div>
+    <div class="container">
 
-    <div id="main">
-        <div class="header-section">
-            <h1>Danh Sách Dự Án</h1>
-            <p>Các sản phẩm mình đã hoàn thành và đang phát triển</p>
+        <div class="profile-card">
+            <div class="profile-left">
+                <div class="avatar-box">
+                    <img src="image/avt.gif" alt="Avatar" id="my-avatar">
+                </div>
+                <div class="profile-info">
+                    <h1>Phúc Thắng</h1>
+                    <span class="job-badge">Blogger - Dev</span>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/tteddy.boy"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-right">
+                <div class="info-row">
+                    <span class="label">EMAIL</span>
+                    <span class="value">thangkeen2@gmail.com</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">BIRTHDAY</span>
+                    <span class="value">16 Mar, 2005</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">PHONE</span>
+                    <span class="value">0989.215.461</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">LOCATION</span>
+                    <span class="value">BAC NINH, VN</span>
+                </div>
+            </div>
         </div>
 
-        <div class="project-grid">
-            
-            <div class="card">
-                <div class="card-img">Ảnh Project 1</div> 
-                <div class="card-body">
-                    <h2 class="card-title">Quản Lý Kho Hàng</h2>
-                    <div class="card-tech">C# Winform • SQL Server</div>
-                    <p class="card-desc">Hệ thống quản lý xuất nhập tồn, tự động tính toán doanh thu và báo cáo hàng tháng.</p>
-                    <a href="#" class="btn-view" onclick="alert('Chỗ này sẽ link tới video demo hoặc Github')">Xem Chi Tiết</a>
-                </div>
-            </div>
+        <div class="content-area">
 
-            <div class="card">
-                <div class="card-img">Ảnh Project 2</div>
-                <div class="card-body">
-                    <h2 class="card-title">Quản Lý Khách Sạn</h2>
-                    <div class="card-tech">.NET • Entity Framework</div>
-                    <p class="card-desc">Phần mềm check-in, check-out, quản lý dịch vụ phòng và tính tiền tự động.</p>
-                    <a href="#" class="btn-view">Xem Chi Tiết</a>
+            <aside class="sidebar">
+                <div class="nav-menu">
+                    <button class="nav-item active" onclick="showTab('about')">
+                        <i class="fa-solid fa-user"></i>
+                        <span>About</span>
+                    </button>
+                    <button class="nav-item" onclick="showTab('resume')">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Resume</span>
+                    </button>
+                    <button class="nav-item" onclick="showTab('works')">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>Works</span>
+                    </button>
+                    <button class="nav-item" onclick="showTab('blog')">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Blog</span>
+                    </button>
+                    <button class="nav-item" onclick="showTab('contact')">
+                        <i class="fa-solid fa-address-book"></i>
+                        <span>Contact</span>
+                    </button>
                 </div>
-            </div>
+            </aside>
 
-            <div class="card">
-                <div class="card-img">Ảnh Project 3</div>
-                <div class="card-body">
-                    <h2 class="card-title">Website Portfolio</h2>
-                    <div class="card-tech">HTML • CSS • JS</div>
-                    <p class="card-desc">Trang web cá nhân giới thiệu bản thân và show các dự án (Chính là trang này).</p>
-                    <a href="#" class="btn-view">Xem Chi Tiết</a>
+            <main class="main-content">
+                <!-- ///////////////////////////// ABOUT ////////////////////////////// -->
+                <div id="about" class="tab-pane active">
+                    <div class="section-header">
+                        <h2>Giới Thiệu</h2>
+                        <div class="line"></div>
+                    </div>
+                    <p class="bio">
+                        Với niềm đam mê công nghệ từ nhỏ, Phúc Thắng - chàng trai trẻ luôn yêu thích lập trình và thiết
+                        kế website.
+                        Chính vì vậy, anh đã tự thiết kế cho mình một website riêng và còn xây dựng rất nhiều chủ đề hữu
+                        ích.
+                    </p>
+
+                    <h3 class="sub-heading">What I'm Doing</h3>
+                    <div class="services-grid">
+                        <div class="service-box">
+                            <i class="fa-solid fa-pen-ruler icon"></i>
+                            <div>
+                                <h4>Web Design</h4>
+                                <p>Thiết kế hiện đại, chuẩn UI/UX chuyên nghiệp.</p>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <i class="fa-solid fa-code icon"></i>
+                            <div>
+                                <h4>Web Development</h4>
+                                <p>Phát triển website hiệu năng cao.</p>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <i class="fa-solid fa-mobile-screen icon"></i>
+                            <div>
+                                <h4>Mobile Apps</h4>
+                                <p>Lập trình ứng dụng iOS và Android.</p>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <i class="fa-solid fa-camera icon"></i>
+                            <div>
+                                <h4>Photography</h4>
+                                <p>Chụp ảnh nghệ thuật chất lượng cao.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+                <!-- ///////////////////////// RESUME///////////////////////////// -->
+                <div id="resume" class="tab-pane">
+                    <div class="section-header">
+                        <h2>Sơ Yếu Lý Lịch</h2>
+                        <div class="line"></div>
+                    </div>
 
+                    <div class="resume-grid">
+
+                        <div class="resume-column">
+                            <div class="resume-header">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Education</span>
+                            </div>
+
+                            <div class="timeline-list">
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">HANOI VOCATIONAL COLLEGE OF TECHNOLOGY</h4>
+                                    <span class="timeline-year">2023 — 2026</span>
+                                    <p class="timeline-desc">
+                                        Comming soon.......
+                                    </p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">None</h4>
+                                    <span class="timeline-year">none</span>
+                                    <p class="timeline-desc">
+                                        Comming soon.......
+                                    </p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">None</h4>
+                                    <span class="timeline-year">none</span>
+                                    <p class="timeline-desc">
+                                        Comming soon......
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resume-column">
+                            <div class="resume-header">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Experience</span>
+                            </div>
+
+                            <div class="timeline-list">
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">None</h4>
+                                    <span class="timeline-year">None</span>
+                                    <p class="timeline-desc">
+                                        Comming soon.......
+                                    </p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">None</h4>
+                                    <span class="timeline-year">None</span>
+                                    <p class="timeline-desc">
+                                        Comming soon.......
+                                    </p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">None</h4>
+                                    <span class="timeline-year">None</span>
+                                    <p class="timeline-desc">
+                                        Comming soon.......
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="skills-section">
+                        <h3 class="resume-header">My Skills</h3>
+
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Web Design</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 70%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Graphic Design</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>C# / Sql </span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //////////////////////////////// WORKS /////////////////////// -->
+                <div id="works" class="tab-pane">
+                    <div class="section-header">
+                        <h2>Dự Án Tiêu Biểu</h2>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="works-filter">
+                        <button class="filter-btn active" data-filter="all">Tất cả</button>
+                        <button class="filter-btn" data-filter="web">Web Design</button>
+                        <button class="filter-btn" data-filter="app">Application</button>
+                        <button class="filter-btn" data-filter="design">Branding</button>
+                    </div>
+
+                    <div class="works-grid" id="works-grid">
+                    </div>
+                </div>
+                <!-- //////////////////////////////// Blog /////////////////////////// -->
+                <div id="blog" class="tab-pane">
+                    <div class="section-header">
+                        <h2>Blog Bài Viết</h2>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="blog-grid" id="blog-list">
+                    </div>
+
+                    <div id="blog-detail" style="display: none;">
+                        <button class="btn-back" onclick="closePost()">
+                            <i class="fa-solid fa-arrow-left"></i> Quay lại
+                        </button>
+                        <div id="detail-content">
+                        </div>
+                    </div>
+                </div>
+                <!-- ////////////////// CONTACT /////////////////////////     -->
+                <div id="contact" class="tab-pane">
+                    <div class="section-header">
+                        <h2>Liên Hệ</h2>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="contact-wrapper">
+                        <div class="contact-form-box">
+                            <h3 class="sub-heading">Gửi tin nhắn</h3>
+                            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvzbpwkw"
+                                method="POST">
+
+                                <div class="form-row">
+                                    <input type="text" name="name" class="form-input" placeholder="Tên của bạn"
+                                        required>
+
+                                    <input type="email" name="email" class="form-input" placeholder="Email liên hệ"
+                                        required>
+                                </div>
+
+                                <input type="text" name="subject" class="form-input" placeholder="Tiêu đề" required>
+
+                                <textarea name="message" class="form-input" rows="5" placeholder="Nội dung tin nhắn..."
+                                    required></textarea>
+
+                                <button type="submit" class="btn-send">
+                                    <i class="fa-regular fa-paper-plane"></i> Gửi Tin Nhắn
+                                </button>
+
+                                <p id="form-status" style="margin-top:10px; font-size:14px; display:none;"></p>
+                            </form>
+                        </div>
+
+                        <div class="map-box">
+                            <h3 class="sub-heading">Vị trí</h3>
+                            <iframe
+                                src="https://www.google.com/maps/place/B%E1%BA%AFc+Ninh,+Vi%E1%BB%87t+Nam/@21.1169484,105.9420428,11z/data=!3m1!4b1!4m6!3m5!1s0x31350a5d26af7a51:0xe55920c0c6558f70!8m2!3d21.121444!4d106.1110501!16zL20vMDNxNmZ3?hl=vi&entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
         </div>
     </div>
 
-    <script>
-        // Script này để đóng mở menu, giống hệt trang index
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.opacity = "0.5";
-        }
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.opacity = "1";
-        }
-    </script>
+
+
+    <div id="secret-login-modal" class="modal-overlay">
+        <div class="login-box">
+            <span class="close-btn" onclick="closeLogin()">&times;</span>
+            <h3>🔐 Admin Access</h3>
+            <p>Nhập mật mã để vào chế độ chỉnh sửa</p>
+            <input type="password" id="admin-pass" placeholder="Mật khẩu...">
+            <button onclick="checkAdmin()">Đăng Nhập</button>
+            <p id="login-msg" style="color: red; margin-top: 10px; font-size: 13px;"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+    <script src="blog.js"></script>
+    <script src="works.js"></script>
 </body>
+
 </html>

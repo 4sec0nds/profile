@@ -38,5 +38,45 @@
             "image": "https://via.placeholder.com/600x400",
             "link": "#"
         }
-    ]
+    ],
+    "resume": {
+        "education": [
+            {
+                "title": "HANOI VOCATIONAL COLLEGE OF TECHNOLOGY",
+                "year": "2023 — 2026",
+                "desc": "Comming soon......."
+            },
+            {
+                "title": "none",
+                "year": "none",
+                "desc": "none"
+            }
+        ],
+        "experience": [
+            {
+                "title": "none",
+                "year": "none",
+                "desc": "none"
+            },
+            {
+                "title": "none",
+                "year": "none",
+                "desc": "none"
+            }
+        ],
+        "skills": [
+            {
+                "name": "Web Design",
+                "percent": "70%"
+            },
+            {
+                "name": "Graphic Design",
+                "percent": "80%"
+            },
+            {
+                "name": "C# / Sql",
+                "percent": "60%"
+            }
+        ]
+    }
 }
