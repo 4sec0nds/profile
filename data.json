@@ -2,24 +2,24 @@
     "blogs": [
         {
             "id": 1,
-            "title": "Thiết kế website giá rẻ uy tín chuyên nghiệp",
-            "category": "Web Design",
+            "title": "Code – Không Chỉ Là Dòng Lệnh, Mà Là Cách Chúng Ta Tư Duy",
+            "category": "Technology",
             "date": "21",
             "month": "Thg 10",
-            "image": "https://via.placeholder.com/600x400",
-            "desc": "Xu hướng truy cập website tìm kiếm thông tin ngày càng tăng...",
-            "content": "<p>Nội dung chi tiết bài viết số 1...</p>",
+            "image": "https://i.ibb.co/FbGqQd86/blob.jpg",
+            "desc": "Code không chỉ là công cụ để tạo ra phần mềm, mà còn là cách con người rèn luyện tư duy logic, giải quyết vấn đề và sáng tạo trong thời đại số.",
+            "content": "<p>Trong thời đại số, <strong>lập trình (coding)</strong> không còn là lãnh địa riêng của dân công nghệ. Code hiện diện ở khắp nơi: từ ứng dụng bạn dùng mỗi ngày, website bạn truy cập, cho đến những hệ thống lớn vận hành ngân hàng, trường học hay bệnh viện.</p><img src='https://images.unsplash.com/photo-1518770660439-4636190af475' alt='Lập trình viên' style='width:100%;border-radius:8px;margin:20px 0;' /><p>Điều đặc biệt ở lập trình không nằm ở ngôn ngữ bạn dùng, mà ở <em>cách bạn suy nghĩ khi viết từng dòng code</em>. Một bài toán phức tạp được chia nhỏ, phân tích và giải quyết từng bước chính là bản chất của tư duy lập trình.</p><h3>🚀 Vì sao học code lại quan trọng?</h3><p>Khi học code, bạn đang rèn luyện não bộ theo một cách rất khác. Bạn học cách đặt câu hỏi đúng, tìm nguyên nhân gốc rễ của vấn đề và không bỏ cuộc cho đến khi tìm ra lời giải.</p><ul><li>🧠 Phát triển tư duy logic và hệ thống</li><li>🔍 Rèn khả năng phân tích và giải quyết vấn đề</li><li>⏳ Tăng tính kiên nhẫn và kỷ luật cá nhân</li></ul><img src='https://images.unsplash.com/photo-1517433456452-f9633a875f6f' alt='Workspace' style='width:100%;border-radius:8px;margin:20px 0;' /><h3>🧠 Code hiện đại: Không chỉ “chạy được” là đủ</h3><p>Ngày nay, một đoạn code tốt không chỉ cần chạy đúng, mà còn phải <strong>dễ đọc, dễ bảo trì và dễ mở rộng</strong>. Các mô hình kiến trúc như <strong>MVC, Layered Architecture hay Clean Architecture</strong> giúp tổ chức code rõ ràng hơn.</p><img src='https://images.unsplash.com/photo-1555066931-4365d14bab8c' alt='Clean Code' style='width:100%;border-radius:8px;margin:20px 0;' /><blockquote>“Code is read more often than it is written.”</blockquote><h3>🔧 Công nghệ chỉ là công cụ, con người mới là trung tâm</h3><p>Ngôn ngữ lập trình có thể thay đổi, framework có thể lỗi thời. Nhưng <strong>tư duy logic, khả năng học hỏi và thích nghi</strong> luôn là tài sản quan trọng nhất.</p><img src='https://images.unsplash.com/photo-1508780709619-79562169bc64' alt='Inspiration' style='width:100%;border-radius:8px;margin:20px 0;' /><h3>🌱 Lời kết</h3><p>Code là một hành trình dài. Nếu bạn đang học code, hãy cứ tiếp tục viết. <strong>Mỗi dòng code đều để lại dấu ấn trên con đường phát triển của bạn.</strong></p>",
             "link": "#"
         },
         {
             "id": 2,
-            "title": "Blogger Hoàng Đam, chàng trai 9x đam mê công nghệ",
+            "title": "Blogger Phúc Thắng, chàng trai Genz đam mê viết blog",
             "category": "About Me",
             "date": "15",
             "month": "Thg 09",
             "image": "https://via.placeholder.com/600x400",
-            "desc": "Câu chuyện về hành trình trở thành Blogger...",
-            "content": "<p>Nội dung chi tiết bài viết số 2...</p>",
+            "desc": "Với niềm đam mê công nghệ từ nhỏ Phúc Thắng chàng trai trẻ năm sinh 2005 rất yêu thích công nghệ...",
+            "content": "<p>Phúc Thắng bắt đầu viết blog với mong muốn chia sẻ kiến thức...</p> <p>Hiện tại anh đang phát triển các dự án về Web và Phần mền quản lí.</p>",
             "link": "#"
         }
     ],

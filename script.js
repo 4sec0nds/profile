@@ -74,7 +74,7 @@ function checkAdmin() {
 
         // THAY LINK DƯỚI BẰNG LINK EDIT FILE DATA.JSON TRÊN GITHUB CỦA BẠN
         // Ví dụ: https://github.com/TenCuaBan/TenRepo/edit/main/data.json
-        window.location.href = "LINK_GITHUB_CUA_BAN_O_DAY";
+        window.location.href = "https://github.com/4sec0nds/profile/edit/master/data.json";
     } else {
         document.getElementById('login-msg').innerText = "Sai mật khẩu!";
         document.getElementById('login-msg').style.color = "red";
